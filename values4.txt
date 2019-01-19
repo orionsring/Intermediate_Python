@@ -1,0 +1,5 @@
+# This is a generator function of triangle co-ordinates
+g = ((x, y) for x in range(10) for y in range(x))
+type(g)
+
+list(g)
