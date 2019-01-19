@@ -1,3 +1,7 @@
+
+# This is an example of cartesian product. 
+# This python script produces the co-ordinates of thirty cartesian points.
+
 vals = [[y * 3 for y in range(x)] for x in range(10)]
 
 outer = []
