@@ -1,6 +1,7 @@
 
 # This is an example of cartesian product. 
 # This python script produces the co-ordinates of thirty cartesian points.
+# The point is to display a nested comprehension.
 
 vals = [[y * 3 for y in range(x)] for x in range(10)]
 
