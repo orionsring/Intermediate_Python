@@ -1,3 +1,12 @@
+# This is a Trace function to use with a map function
+# You have to manually iterate values produced by map
+# In the repl >> result = map(Trace()(ord), 'The quick brown fox')
+# Next   repl >> result
+# And repeat  >> next(result)
+# To view each map point individually.
+
+
+
 class Trace:
     def __init__(self):
         self.enabled = True
