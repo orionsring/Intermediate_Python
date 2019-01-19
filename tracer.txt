@@ -1,9 +1,6 @@
 # This is a Trace function to use with a map function
 # You have to manually iterate values produced by map
-# In the repl >> result = map(Trace()(ord), 'The quick brown fox')
-# Next   repl >> result
-# And repeat  >> next(result)
-# To view each map point individually.
+
 
 
 
@@ -17,3 +14,16 @@ class Trace:
                 print('Calling {}'.format(f))
             return f(*args, **kwargs)
         return wrap
+
+
+
+# Once you    >>> from tracer import Trace
+# You can enter the command
+# In the repl >>> result = map(Trace()(ord), 'The quick brown fox')
+# Next   repl >>> result
+# And repeat  >>> next(result)
+# To view each map point individually.
+
+
+
+
