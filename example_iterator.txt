@@ -9,7 +9,7 @@ class ExampleIterator:
         return self
 
     def __next__(self):
-        if self.inded >= len(self.data):
+        if self.index >= len(self.data):
             raise StopIteration()
 
         rslt = self.data[self.index]
