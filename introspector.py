@@ -1,7 +1,8 @@
 import inspect
 import reprlib
 import itertools
-
+#   This is the final project form intermediate python a.k.a. python beyond the basics
+#   Credit to Robert Smallshire & Austin Bingham
 
 def full_sig(method):
     try:
