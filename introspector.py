@@ -67,3 +67,7 @@ def dump(obj):
 	print_table(method_names_and_doc, "Name", "Description")
 	print()
 	
+### REPL ###
+# >>> from introspector import dump
+# >>> dump(7)
+				  
