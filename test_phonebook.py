@@ -12,5 +12,9 @@ class PhonebookTest(unittest.TestCase):
 	    phonebook = Phonebook()
 		phonebook.add("Bob", "123445")
 		self.assertEqual("12345", phonebook.lookup("Bob"))
-		
+	
+    def test_missing_entry_raises_keyError(self):
+	    phonebook = Phonebook()
+		with self.assertRaises(KeyError):
+            phonebook.lookup("missing")
 		
