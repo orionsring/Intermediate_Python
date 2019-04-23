@@ -11,7 +11,7 @@ class MyServiceTest(unittest.TestCase):
 		response = my_service.handle_request("do stuff", token=None)
 		self.assertIn("please enter your login details", response)
 		
-	def test_valid_token(self):
+    def test_valid_token(self):
 	    registry = FakeSignleSignOnRegistry()
 		token = registry.register("valid credentials")
 		my_service = MyService(registry)
@@ -19,7 +19,7 @@ class MyServiceTest(unittest.TestCase):
 		response = my_service.handle_request("do stuff", token)
 		self.assertIn("hello world", response)
 		
-	def test_invalid_token_with_mock(self):
+    def test_invalid_token_with_mock(self):
 	    token = SSOToken()
 		registry = MockSingleSignOnRegistry(expected_token=token, token_is_valid=True)
 		my_service = MyService(registry)
