@@ -27,5 +27,13 @@ class MyServiceTest(unittest.TestCase):
 		response = my_service.handle_request("do stuff", token)
 		self.assertTrue(registry.is_valid_was_called)
 		
-
+    def test_valid_token_with_mock(self):
+	    token = SSOToken()
+		registry = MockSingleSignOnRegistry(expected_token=token, token_is_valid=True)
+		my_service = MyService(registry)
+		
+		response = my_service.handle_request("do stuff", token)
+		self.assertTrue(registry.is_valid_was_called)
+		
+		
 	
