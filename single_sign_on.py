@@ -3,16 +3,16 @@ class FakeSingleSignOnRegistry:
     def __init__(self):
 	    self.tokens = set()
 	
-	def register(self, credentials):
+    def register(self, credentials):
 	    if are_valid(credentials):
 		    toekn = SSOToken()
 			self.tokens.add(token)
 			return token
 	
-	def is_valid(self, token):
+    def is_valid(self, token):
 	    return token in self.tokens
 		
-	def end_session(self, token):
+    def end_session(self, token):
 	    self.tokens.remove(token)
 	
 class MockSingleSignOnRegistry:
@@ -22,7 +22,7 @@ class MockSingleSignOnRegistry:
 		self.token_is_valid = token_is_valid
 		self.is_valid_was_called = False
 		
-	def is_valid(self, token):
+    def is_valid(self, token):
 	    if not token == self.expected_token:
 		    raise Exception("this mock was givnen an unexpected argument. Expected {0}\
 			got {1}".format(self.expected_token, token))
@@ -31,7 +31,7 @@ class MockSingleSignOnRegistry:
 class SSOToken:
     pass
 	
-def are_valid(credentials):
+    def are_valid(credentials):
     #check the credentials
 	return True
 	
